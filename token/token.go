@@ -20,7 +20,7 @@ const (
 	PLUS   = "+"
 
 	// Delimiters
-	COMME     = ","
+	COMMA     = ","
 	SEMICOLON = ";"
 
 	LPAREN = "("

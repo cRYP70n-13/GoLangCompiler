@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"../token"
+	"github.com/goCompiler/token"
 )
 
 type Lexer struct {
@@ -43,6 +43,10 @@ func (l *Lexer) NextToken() token.Token {
 		tok = NewToken(token.LBRACE, l.ch)
 	case '}':
 		tok = NewToken(token.RBRACE, l.ch)
+	case '+':
+		tok = NewToken(token.PLUS, l.ch)
+	case ',':
+		tok = NewToken(token.COMMA, l.ch)
 	case 0:
 		tok.Literal = ""
 		tok.Type = token.EOF
