@@ -33,11 +33,11 @@ func (p *Parser) ParseProgram() *ast.Program {
 	for p.curToken.Type != token.EOF {
 		stmt := p.parseStatement()
 		if stmt != nil {
-			program.Statements = append(program.Statements, nil)
+			program.Statements = append(program.Statements, stmt)
 		}
 		p.nextToken()
 	}
-	return nil
+	return program
 }
 
 func (p *Parser) parseStatement() ast.Statement {
